@@ -1,0 +1,16 @@
+model_path: "models/bert_preference_model"
+vectors_path: "models/user_vectors.pkl"
+alpha: 0.01
+weights:
+  - 0.3  # ingredient_similarity
+  - 0.3  # price_proximity
+  - 0.2  # rating
+  - 0.2  # sentiment
+lambda_mmr: 0.7
+#mongo_uri: "mongodb://legy:legy123@mongo:27017/leggydb?authSource=admin"
+mongo_uri: "mongodb+srv://ranimabbessi:Y3whR02H5skyatm2@cluster0.mtilp.mongodb.net/legy?retryWrites=true&w=majority&appName=Cluster0"
+
+#kafka_brokers: ${KAFKA_BROKERS:-kafka:9092}
+kafka_brokers:
+  - "localhost:29092"
+database_name: "legy"

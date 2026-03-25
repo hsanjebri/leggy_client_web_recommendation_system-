@@ -1,0 +1,31 @@
+Bytecode
+
+pycache/ *.pyc *.pyo *.pyd
+
+Logs
+
+*.log
+
+Temp files
+
+*.tmp
+
+Development folders
+
+tests/ notebooks/
+
+Data files
+
+*.csv *.md *.zip *.tar.gz
+
+OS / Git metadata
+
+.DS_Store .git/ .gitignore
+
+Virtual environments
+
+venv/ .env
+
+Exclude large files not needed
+
+*.bak *.swp

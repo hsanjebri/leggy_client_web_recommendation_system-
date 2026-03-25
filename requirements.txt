@@ -1,0 +1,17 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+flask==3.0.3
+flask_cors==4.0.1
+pandas==2.2.3
+numpy==2.3.2
+scikit-learn==1.6.1
+vaderSentiment==3.3.2
+pymongo==4.7.2
+pyyaml==6.0.1
+nltk==3.8.1
+transformers==4.41.0
+torch==2.6.0+cpu
+supervisor==4.2.5
+gunicorn==22.0.0
+kafka-python==2.0.2
+python-dotenv
+gdown

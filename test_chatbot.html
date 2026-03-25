@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legy Chatbot API Tester</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .response {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        .error {
+            border-left-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        .success {
+            border-left-color: #28a745;
+            background-color: #d4edda;
+        }
+        .result-item {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .result-item h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .result-item p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .keywords {
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .keywords strong {
+            color: #495057;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Legy Chatbot API Tester</h1>
+        
+        <form id="chatbotForm">
+            <div class="form-group">
+                <label for="userId">User ID:</label>
+                <input type="text" id="userId" value="6821cb90b5ce7f4dd4d2df0b" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="3" placeholder="Enter your food request (e.g., 'I want spicy food')" required></textarea>
+            </div>
+            
+            <button type="submit" id="submitBtn">Send Message</button>
+        </form>
+        
+        <div id="response" class="response" style="display: none;">
+            <h3>Response:</h3>
+            <div id="responseContent"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('chatbotForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const responseDiv = document.getElementById('response');
+            const responseContent = document.getElementById('responseContent');
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            // Get form data
+            const userId = document.getElementById('userId').value;
+            const message = document.getElementById('message').value;
+            
+            try {
+                // Make API request
+                const response = await fetch('http://localhost:8001/chatbot', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        user_id: userId,
+                        message: message
+                    })
+                });
+                
+                const data = await response.json();
+                
+                // Display response
+                responseDiv.style.display = 'block';
+                responseDiv.className = 'response success';
+                
+                let html = '';
+                
+                if (data.error) {
+                    html = `<div class="error"><strong>Error:</strong> ${data.error}</div>`;
+                    responseDiv.className = 'response error';
+                } else {
+                    // Show keywords
+                    if (data.matched_keywords && data.matched_keywords.length > 0) {
+                        html += `<div class="keywords"><strong>Keywords found:</strong> ${data.matched_keywords.join(', ')}</div>`;
+                    }
+                    
+                    // Show results
+                    if (data.results && data.results.length > 0) {
+                        html += `<h4>🍽️ Recommendations (${data.results.length} items):</h4>`;
+                        data.results.forEach((item, index) => {
+                            html += `
+                                <div class="result-item">
+                                    <h4>${index + 1}. ${item.name || 'N/A'}</h4>
+                                    <p><strong>Restaurant:</strong> ${item.restaurant || 'N/A'}</p>
+                                    <p><strong>Price:</strong> $${item.price || 'N/A'}</p>
+                                    <p><strong>Rating:</strong> ${item.rating || 'N/A'}</p>
+                                    <p><strong>Description:</strong> ${item.description || 'N/A'}</p>
+                                </div>
+                            `;
+                        });
+                    } else {
+                        html += '<p>No recommendations found. Try different keywords!</p>';
+                    }
+                    
+                    // Show message if any
+                    if (data.message) {
+                        html += `<p><em>${data.message}</em></p>`;
+                    }
+                }
+                
+                responseContent.innerHTML = html;
+                
+            } catch (error) {
+                responseDiv.style.display = 'block';
+                responseDiv.className = 'response error';
+                responseContent.innerHTML = `<div class="error"><strong>Connection Error:</strong> ${error.message}<br><br>Make sure the chatbot API is running on port 8001!</div>`;
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        });
+        
+        // Add some example messages
+        const messageInput = document.getElementById('message');
+        const examples = [
+            'I want spicy food',
+            'Show me Italian cuisine',
+            'I need burgers',
+            'Pizza please',
+            'I want something cheap'
+        ];
+        
+        let exampleIndex = 0;
+        messageInput.addEventListener('focus', function() {
+            if (!this.value) {
+                this.placeholder = `Try: "${examples[exampleIndex]}"`;
+                exampleIndex = (exampleIndex + 1) % examples.length;
+            }
+        });
+    </script>
+</body>
+</html>

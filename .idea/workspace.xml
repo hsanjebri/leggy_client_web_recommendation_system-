@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63e9a2b0-30db-4a3c-bc92-65cf886804ff" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Legy-recommendation-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Legy-recommendation-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fallback_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/fallback_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchestrator.py" beforeDir="false" afterPath="$PROJECT_DIR$/orchestrator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preference_Recommendation.py" beforeDir="false" afterPath="$PROJECT_DIR$/preference_Recommendation.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MouhebN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Pamostaa/Legy-recommendation-system.git&quot;,
+    &quot;accountId&quot;: &quot;c1972bdb-2ff0-472d-806d-e8eed9a0c29b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2zJvV0obk90mfNdOuRKH6y7qoty" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev-02&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hassa/Videos/Legy-recommendation-system&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Legy-recommendation-system" type="PythonConfigurationType" factoryName="Python">
+      <module name="Legy-recommendation-system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63e9a2b0-30db-4a3c-bc92-65cf886804ff" name="Changes" comment="" />
+      <created>1751462010335</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751462010335</updated>
+      <workItem from="1751462011641" duration="816000" />
+      <workItem from="1751537123620" duration="11674000" />
+      <workItem from="1751888057424" duration="6126000" />
+      <workItem from="1751981049051" duration="9000" />
+      <workItem from="1756908001616" duration="4892000" />
+      <workItem from="1757083332702" duration="1199000" />
+      <workItem from="1757427048067" duration="16677000" />
+      <workItem from="1757692208306" duration="3715000" />
+      <workItem from="1757852137111" duration="10813000" />
+      <workItem from="1757946684939" duration="469000" />
+      <workItem from="1757947966495" duration="9638000" />
+      <workItem from="1758020716026" duration="6000" />
+      <workItem from="1758457245168" duration="6323000" />
+      <workItem from="1758543231477" duration="4403000" />
+      <workItem from="1758883636138" duration="597000" />
+      <workItem from="1758928414616" duration="3533000" />
+      <workItem from="1758979077340" duration="7071000" />
+      <workItem from="1759752248737" duration="852000" />
+      <workItem from="1759753518048" duration="24000" />
+      <workItem from="1759753787343" duration="2038000" />
+      <workItem from="1759882045993" duration="1073000" />
+      <workItem from="1759945420809" duration="3091000" />
+      <workItem from="1759960085954" duration="2119000" />
+      <workItem from="1760039442639" duration="3943000" />
+      <workItem from="1760901376254" duration="727000" />
+      <workItem from="1763553917298" duration="2035000" />
+      <workItem from="1767192355327" duration="73000" />
+      <workItem from="1774346635244" duration="1177000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

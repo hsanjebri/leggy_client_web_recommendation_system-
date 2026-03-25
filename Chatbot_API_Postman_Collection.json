@@ -1,0 +1,124 @@
+{
+  "info": {
+    "name": "Legy Chatbot API",
+    "description": "Collection for testing the Legy recommendation chatbot API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Chatbot - Spicy Food",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_id\": \"6821cb90b5ce7f4dd4d2df0b\",\n  \"message\": \"I want spicy food\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8001/chatbot",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8001",
+          "path": ["chatbot"]
+        }
+      }
+    },
+    {
+      "name": "Chatbot - Italian Cuisine",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_id\": \"6821cb90b5ce7f4dd4d2df0b\",\n  \"message\": \"Show me Italian cuisine\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8001/chatbot",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8001",
+          "path": ["chatbot"]
+        }
+      }
+    },
+    {
+      "name": "Chatbot - Burgers",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_id\": \"6821cb90b5ce7f4dd4d2df0b\",\n  \"message\": \"I need burgers\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8001/chatbot",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8001",
+          "path": ["chatbot"]
+        }
+      }
+    },
+    {
+      "name": "Chatbot - Pizza",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_id\": \"6821cb90b5ce7f4dd4d2df0b\",\n  \"message\": \"Pizza please\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8001/chatbot",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8001",
+          "path": ["chatbot"]
+        }
+      }
+    },
+    {
+      "name": "Chatbot - Cheap Food",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_id\": \"6821cb90b5ce7f4dd4d2df0b\",\n  \"message\": \"I want something cheap\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8001/chatbot",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8001",
+          "path": ["chatbot"]
+        }
+      }
+    }
+  ]
+}
