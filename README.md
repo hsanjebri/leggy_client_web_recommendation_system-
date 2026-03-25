@@ -25,9 +25,9 @@ graph TD
 
     %% Connections
     Client <-->|REST APIs| Spring
-    Spring -->|Publishes Events\n(User actions, new orders)| Kafka
+    Spring -->|"Publishes Events<br>(User actions, new orders)"| Kafka
     Kafka -->|Consumes Events| RecSys
-    Client <-->|REST APIs\n(Fetch recommendations)| RecSys
+    Client <-->|"REST APIs<br>(Fetch recommendations)"| RecSys
     
     %% DB Connections
     Spring <--> Mongo
